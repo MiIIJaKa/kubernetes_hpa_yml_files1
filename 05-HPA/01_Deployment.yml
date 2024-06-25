@@ -15,9 +15,9 @@ spec:
    spec:
      containers:
      - name: hpa-demo-deployment
-       image: mijaka/mijaka_pub
+       image: k8s.gcr.io/hpa-example
        ports:
-       - containerPort: 5173
+       - containerPort: 80
        resources:
          limits:
            cpu: 500m
