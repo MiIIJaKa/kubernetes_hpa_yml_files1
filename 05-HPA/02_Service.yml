@@ -7,7 +7,7 @@ metadata:
    run: hpa-demo-deployment
 spec:
  ports:
- - port: 5173
+ - port: 80
  selector:
    run: hpa-demo-deployment
 ...
