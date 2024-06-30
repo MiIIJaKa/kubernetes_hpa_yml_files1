@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: hpa-demo-deployment
+ name: careqrapp-service
 spec:
  selector:
    matchLabels:
-     run: hpa-demo-deployment
+     run: careqrapp-service
  replicas: 1
  template:
    metadata:
      labels:
-       run: hpa-demo-deployment
+       run: careqrapp-service
    spec:
      containers:
-     - name: hpa-demo-deployment
-       image: k8s.gcr.io/hpa-example
+     - name: careqrapp-service
+       image: mijaka/mijaka_pub  
        ports:
-       - containerPort: 80
+       - containerPort: 5173
        resources:
          limits:
            cpu: 500m
